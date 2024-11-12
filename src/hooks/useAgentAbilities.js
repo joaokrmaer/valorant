@@ -8,7 +8,7 @@ const useAgentAbilities = (id) => {
   useEffect(() => {
     const fetchAbilities = async () => {
       try {
-        const response = await fetch(`https://valorant-api.com/v1/agents/${id}`);
+        const response = await fetch(https://valorant-api.com/v1/agents/${id}?language=pt-BR);
         const data = await response.json();
         setAbilities(data.data.abilities); // Garantindo que estamos acessando o campo correto
       } catch (error) {
