@@ -1,0 +1,76 @@
+/* src/components/AgentCard.css */
+
+
+/* Estilo global */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0F1923; /* Cor de fundo semelhante ao tema de Valorant */
+    color: #FFFFFF; /* Texto branco para contraste */
+    margin: 0;
+    padding: 0;
+}
+
+/* Contêiner principal */
+.agent-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background-color: #1A1A1D; /* Cor de fundo dos detalhes */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(252, 250, 250, 0.2); /* Sombra para efeito de profundidade */
+}
+
+/* Título do agente */
+.agent-details h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Imagem do agente */
+.agent-details img {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Descrição do agente */
+.agent-details p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Título das habilidades */
+.agent-details h2 {
+    color: #FFFFFF;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Contêiner das habilidades */
+.ability {
+    background-color: #2A2A2D; /* Cor de fundo das habilidades */
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Título da habilidade */
+.ability h3 {
+    color: #FFFFFF;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Descrição da habilidade */
+.ability p {
+    font-size: 16px;
+    line-height: 1.4;
+}

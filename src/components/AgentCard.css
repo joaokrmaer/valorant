@@ -1,0 +1,71 @@
+/* Container dos cartões */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Espaço entre os cards */
+  max-width: 1200px; /* Limite de largura para manter os cards centralizados */
+  margin: 0 auto; /* Centraliza o container na página */
+  padding: 20px;
+}
+
+/* Estilo do cartão do agente */
+.agent-card {
+  border: 2px solid #D32F2F;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  background-color: #1A1A1D;
+  transition: all 0.3s ease-in-out;
+  width: calc(33.333% - 40px); /* Ajusta a largura para 3 cards por linha, considerando o gap */
+  max-width: 320px; /* Limite máximo para responsividade */
+}
+
+.agent-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Imagem do agente */
+.agent-card img {
+  width: 100%;
+  height: auto;
+  max-width: 220px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 3px solid #D32F2F;
+}
+
+/* Estilo do título do agente */
+.agent-card h2 {
+  color: #D32F2F;
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+/* Estilo do botão */
+.agent-card button {
+  background-color: #D32F2F;
+  color: #FFFFFF;
+  padding: 12px 20px;
+  border: 2px solid #D32F2F;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.agent-card button:hover {
+  background-color: #FF5252;
+  transform: scale(1.05);
+}
+
+.agent-card button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 82, 82, 0.6);
+}

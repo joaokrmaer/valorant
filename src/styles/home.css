@@ -1,0 +1,103 @@
+/* src/styles/home.css */
+
+/* Estilo global */
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('../styles/background.png'); /* Caminho para sua imagem de fundo */
+  background-size: cover; /* Faz a imagem cobrir toda a tela */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Impede a repetição da imagem */
+  background-attachment: fixed; /* Mantém a imagem fixa no fundo */
+  height: 100vh; /* Garante que a altura do corpo cubra a altura total da janela */
+  width: 100vw; /* Garante que a largura do corpo cubra a largura total da janela */
+  color: #FFFFFF; /* Texto branco para contraste */
+  margin: 0;
+  padding: 0;
+}
+
+/* Lista de Agentes */
+.agent-list-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden; /* Garante que a rolagem ocorra dentro dos limites do contêiner */
+}
+
+.agent-list {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  overflow-x: auto; /* Permite rolagem horizontal */
+  scroll-behavior: smooth; /* Rolagem suave */
+  white-space: nowrap; /* Impede quebras de linha */
+}
+
+/* Cartão de Agente */
+.agent-card {
+  flex: 0 0 200px; /* Cada cartão ocupa 200px de largura fixa */
+  border: 1px solid #ccc;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+  background-color: #FFFFFF;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.agent-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
+
+/* Imagem do Agente */
+.agent-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Título e Texto do Agente */
+.agent-card h3,
+.agent-card p {
+  color: #000; /* Define a cor preta para o texto */
+  margin: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* Botões de Navegação */
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.nav-button.left {
+  left: 10px;
+}
+
+.nav-button.right {
+  right: 10px;
+}
+.agent-list-container::-webkit-scrollbar {
+  display: none; /* Oculta a barra de rolagem no contêiner */
+}
+
+.agent-list {
+  -ms-overflow-style: none;  /* Oculta a barra de rolagem no IE e Edge */
+  scrollbar-width: none;  /* Oculta a barra de rolagem no Firefox */
+}
