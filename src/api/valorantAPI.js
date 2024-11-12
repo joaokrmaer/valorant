@@ -5,7 +5,7 @@ const API_URL = 'https://valorant-api.com/v1/';
 // Função para buscar todos os agentes
 export const fetchAgents = async () => {
   try {
-    const response = await fetch(`${API_URL}agents`);
+    const response = await fetch(${API_URL}agents?isPlayableCharacter=true&language=pt-BR);
     if (!response.ok) throw new Error('Erro ao carregar os agentes');
     const data = await response.json();
     return data.data; // Retorna os agentes
@@ -18,7 +18,8 @@ export const fetchAgents = async () => {
 // Função para buscar os detalhes de um agente específico
 export const fetchAgentDetails = async (id) => {
   try {
-    const response = await fetch(`${API_URL}agents/${id}`);
+    const response = await fetch(${API_URL}agents/${id}?language=pt-BR);
+    await fetch('${API_URL}agents/${id}?isPlayableCharacter=true');
     if (!response.ok) throw new Error('Erro ao carregar detalhes do agente');
     const data = await response.json();
     return data.data; // Retorna os detalhes do agente
